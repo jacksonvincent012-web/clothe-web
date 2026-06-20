@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHINNERS — Premium Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">SHINNERS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#" class="nav-link active" data-category="">All</a>
+        <a href="#" class="nav-link" data-category="T-Shirts">T-Shirts</a>
+        <a href="#" class="nav-link" data-category="Jackets">Jackets</a>
+        <a href="#" class="nav-link" data-category="Pants">Pants</a>
+        <a href="#" class="nav-link" data-category="Shoes">Shoes</a>
+        <a href="#" class="nav-link" data-category="Dresses">Dresses</a>
+        <a href="#" class="nav-link" data-category="Activewear">Active</a>
+        <a href="#" class="nav-link" data-category="Trousers">Trousers</a>
+        <a href="#" class="nav-link" data-category="Books">Books</a>
+      </div>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Define Your Style</h1>
+      <p class="hero-subtitle">Discover premium fashion that speaks to your individuality. From streetwear to sophistication — we've got you covered.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+        <a href="#products" class="btn btn-outline">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section" id="products">
+    <div class="container">
+      <div class="search-wrapper">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search products...">
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section" id="shopSection">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Collection</h2>
+        <p class="section-desc">Handpicked styles for the modern individual</p>
+      </div>
+      <div class="category-pills" id="categoryPills">
+        <button class="pill active" data-category="">All</button>
+        <button class="pill" data-category="T-Shirts">T-Shirts</button>
+        <button class="pill" data-category="Jackets">Jackets</button>
+        <button class="pill" data-category="Pants">Pants</button>
+        <button class="pill" data-category="Shoes">Shoes</button>
+        <button class="pill" data-category="Dresses">Dresses</button>
+        <button class="pill" data-category="Sweaters">Sweaters</button>
+        <button class="pill" data-category="Activewear">Activewear</button>
+        <button class="pill" data-category="Tops">Tops</button>
+        <button class="pill" data-category="Trousers">Trousers</button>
+        <button class="pill" data-category="Books">Books</button>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <div class="loading">Loading amazing fashion...</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>SHINNERS</h3>
+          <p>Premium fashion for those who dare to stand out. Quality fabrics, timeless designs, modern fits.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#" onclick="scrollToSection('products')">Shop All</a>
+          <a href="#" onclick="filterCategory('Books')">Book Catalog</a>
+          <a href="#" onclick="showToast('📏 Size Guide: S(36-38), M(39-41), L(42-44), XL(45-47)','info')">Size Guide</a>
+          <a href="#" onclick="showToast('🚚 Free shipping on orders over $100. Standard delivery 5-7 business days.','info')">Shipping</a>
+          <a href="#" onclick="showToast('↩️ 30-day return policy. Items must be unworn with tags. Full refund within 14 days.','info')">Returns</a>
+        </div>
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <a href="#" onclick="filterCategory('T-Shirts')">New Arrivals</a>
+          <a href="#" onclick="filterCategory('Jackets')">Best Sellers</a>
+          <a href="#" onclick="filterCategory('')" class="active">Sale — Up to 40% Off</a>
+          <a href="#" onclick="showToast('✨ Explore our premium collections — Streetwear, Formal, Active, and Seasonal drops.','info')">Collections</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get 10% off your first order</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SHINNERS. All rights reserved. Crafted with passion.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Shopping Bag</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <p>Your bag is empty</p>
+        <span>Add some items to get started</span>
+      </div>
+    </div>
+    <div class="cart-summary" id="cartSummary" style="display:none;">
+      <div class="summary-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="summary-row discount-row" id="discountRow" style="display:none;"><span>Discount (10%)</span><span id="cartDiscount" class="discount-amount">-$0.00</span></div>
+      <div class="summary-row"><span>Tax (8%)</span><span id="cartTax">$0.00</span></div>
+      <div class="summary-row total-row"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      <button class="btn btn-primary btn-checkout" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="checkoutModal">
+    <div class="modal-header">
+      <h3>Checkout</h3>
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+    <form id="checkoutForm">
+      <div class="form-group">
+        <label for="customerName">Full Name</label>
+        <input type="text" id="customerName" required placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="customerEmail">Email</label>
+        <input type="email" id="customerEmail" required placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label for="customerAddress">Shipping Address</label>
+        <textarea id="customerAddress" required placeholder="123 Fashion Street, NY 10001"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Payment Method</label>
+        <div class="payment-options">
+          <label class="payment-option"><input type="radio" name="payment" value="credit" checked><span>Credit Card</span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="paypal"><span>PayPal</span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="cod"><span>Cash on Delivery</span></label>
+        </div>
+      </div>
+      <div class="order-summary-mini" id="orderSummaryMini"></div>
+      <button type="submit" class="btn btn-primary btn-place-order">Place Order</button>
+    </form>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
